@@ -1,0 +1,37 @@
+import javax.swing.JOptionPane;
+
+public class Controle {
+
+	static DespesaPessoal despesas;
+	static int dia, mes, ano;
+	static String itemDespesa;
+	static double valor;
+	static String cpf;
+	
+	public static void main(String[] args) {
+		cpf = JOptionPane.showInputDialog("CPF: ");
+		// Icone Default
+		JOptionPane.showMessageDialog(null, "Exemplo Icone Default.");
+
+		// Icone Warning
+		JOptionPane.showMessageDialog(null,
+		    "Exemplo Icone Warning",
+		    "Warning",
+		    JOptionPane.WARNING_MESSAGE);
+
+		// Icone Erro
+		JOptionPane.showMessageDialog(null,
+		    "Exemplo Icone Error",
+		    "Error",
+		    JOptionPane.ERROR_MESSAGE);
+
+		// Sem icone
+		JOptionPane.showMessageDialog(null,
+		    "Exemplo sem Icone",
+		    "Sem Icone",
+		    JOptionPane.PLAIN_MESSAGE);
+
+
+	}
+
+}

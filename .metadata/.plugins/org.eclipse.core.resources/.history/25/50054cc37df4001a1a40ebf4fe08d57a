@@ -1,0 +1,9 @@
+
+public class Pessoa {
+	// Atributos
+	public String nome;
+	public String CPF;
+	public double peso;
+	public double altura;
+
+}

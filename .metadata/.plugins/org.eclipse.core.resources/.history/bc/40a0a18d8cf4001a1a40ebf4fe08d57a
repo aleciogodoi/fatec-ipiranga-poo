@@ -1,0 +1,10 @@
+
+public class TesteContaCorrente {
+
+	public static void main(String[] args) {
+		ContaCorrente c01 = new ContaCorrente();
+		c01.saldo();
+
+	}
+
+}

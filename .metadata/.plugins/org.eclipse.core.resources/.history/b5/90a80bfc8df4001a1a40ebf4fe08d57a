@@ -1,0 +1,64 @@
+
+public class ContaCorrente {
+	private String numero;
+	private String nome;
+	private char sexo;
+	private int idade;
+	private boolean contaConjunta;
+	private float saldo;
+	
+	public void deposito(float valor) {
+		if(valor > 0) {
+			this.saldo += valor; 
+			this.saldo();
+		} else {
+			System.out.println("Deposito com valor inválido!!! ("+valor+")");
+		}	
+	}
+	
+	public void saldo() {
+		System.out.println("------------------------------------------");
+		System.out.println("Nome: "+this.getNome() + " Nr. Conta: "+this.getNumero());
+		if (this.isContaConjunta())
+			System.out.print("Conta Conjunta");
+		else
+			System.out.print("Não é Conta Conjunta");
+		System.out.print("\tSaldo: "+this.getSaldo());
+		System.out.println("\n------------------------------------------");
+	}
+	
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public char getSexo() {
+		return sexo;
+	}
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
+	}
+	public int getIdade() {
+		return idade;
+	}
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+	public boolean isContaConjunta() {
+		return contaConjunta;
+	}
+	public void setContaConjunta(boolean contaConjunta) {
+		this.contaConjunta = contaConjunta;
+	}
+	public float getSaldo() {
+		return saldo;
+	}
+	
+}

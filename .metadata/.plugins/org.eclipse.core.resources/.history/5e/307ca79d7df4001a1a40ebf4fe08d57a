@@ -1,0 +1,12 @@
+
+public class TestePessoa {
+
+	public static void main(String[] args) {
+		Pessoa p01 = new Pessoa();
+		p01.nome = "Alex";
+		p01.CPF = "21217654309";
+		p01.altura = 1.85f;
+		p01.peso = 82.78f;
+	}
+
+}

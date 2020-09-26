@@ -1,0 +1,14 @@
+
+public class Controle {
+
+	static DespesaPessoal despesas;
+	static int dia, mes, ano;
+	static String itemDespesa;
+	static double valor;
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

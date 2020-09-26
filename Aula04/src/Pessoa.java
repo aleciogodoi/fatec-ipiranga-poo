@@ -1,0 +1,41 @@
+
+public class Pessoa {
+	// Atributos
+	private String nome;
+	private String CPF;
+	private double peso;
+	private double altura;
+	private int anoNascimento;
+	
+	public int getAnoNascimento() {
+		return anoNascimento;
+	}
+	public void setAnoNascimento(int anoNascimento) {
+		this.anoNascimento = anoNascimento;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCPF() {
+		return CPF;
+	}
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+	public double getPeso() {
+		return peso;
+	}
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	public double getAltura() {
+		return altura;
+	}
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
+}

@@ -1,0 +1,16 @@
+
+public class TesteAluno {
+
+	public static void main(String[] args) {
+		Aluno aluno01 = new Aluno("Alex","54320-9", 7, 5, 0);
+		Aluno aluno02 = new Aluno("Elena","74658-8", 5, 5, 7);
+
+		System.out.println(aluno01);
+		System.out.println("Media = "+aluno01.calculaMedia());
+		System.out.println("Media Final = "+aluno01.calculaMediaFinal());
+		System.out.println(aluno02);
+		System.out.println("Media = "+aluno02.calculaMedia());
+		System.out.println("Media Final = "+aluno02.calculaMediaFinal());
+	}
+
+}

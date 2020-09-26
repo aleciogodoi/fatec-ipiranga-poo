@@ -1,0 +1,9 @@
+
+public class TestePessoa {
+
+	public static void main(String[] args) {
+		Pessoa p01 = new Pessoa();
+		System.out.println("Nome: "+p01.nome);
+	}
+
+}

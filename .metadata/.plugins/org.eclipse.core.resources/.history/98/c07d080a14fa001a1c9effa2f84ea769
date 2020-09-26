@@ -1,0 +1,42 @@
+import javax.swing.JOptionPane;
+
+public class Controle {
+
+	static DespesaPessoal despesas;
+	static int dia, mes, ano;
+	static String itemDespesa;
+	static double valor;
+	static String cpf;
+	
+	public static void main(String[] args) {
+		cpf = JOptionPane.showInputDialog("CPF: ");
+		despesas = new DespesaPessoal(cpf);
+		controleDespesas();
+	}
+
+	public static void controleDespesas(){
+		String opcao = "";
+		do {
+			opcao = JOptionPane.showInputDialog(
+					  "1 - Lançamento de despesa\n"
+					+ "2 - Total geral de despesas\n"
+					+ "3 - Total de despesas mês/ano\n"
+					+ "4 - Total de despesas dia/mês/ano\n"
+					+ "5 - Imprimir todas as despesas\n"
+					+ "6 - Imprimir depesas de um mês/ano\n"
+					+ "7 - Imprimir depesas de um dia/mês/ano\n"
+					+ "8 - Sair"
+			);
+			switch (opcao) {
+			case "1":
+				//entradaDespesa();
+				break;
+			case "2":
+				JOptionPane.showMessageDialog(null, "Total de Despesas: "+despesas.getTotal());
+			case "5":
+				despesas.getTotal();
+				break;
+			}
+		} while(!opcao.equals("8"));
+	}
+}

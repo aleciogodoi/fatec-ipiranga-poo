@@ -1,0 +1,80 @@
+import javax.swing.JOptionPane;
+
+public class Controle {
+
+	static DespesaPessoal despesas;
+	static int dia, mes, ano;
+	static String itemDespesa;
+	static double valor;
+	static String cpf;
+	
+	public static void main(String[] args) {
+		cpf = JOptionPane.showInputDialog("CPF: ");
+		// Icone Default
+		JOptionPane.showMessageDialog(null, "Exemplo Icone Default.");
+
+		// Icone Warning
+		JOptionPane.showMessageDialog(null,
+		    "Exemplo Icone Warning",
+		    "Warning",
+		    JOptionPane.WARNING_MESSAGE);
+
+		// Icone Erro
+		JOptionPane.showMessageDialog(null,
+		    "Exemplo Icone Error",
+		    "Error",
+		    JOptionPane.ERROR_MESSAGE);
+
+		// Sem icone
+		JOptionPane.showMessageDialog(null,
+		    "Exemplo sem Icone",
+		    "Sem Icone",
+		    JOptionPane.PLAIN_MESSAGE);
+		
+		// Customizando Respostas
+		Object[] opcoes = {"Sim, por favor",
+		                    "Não, obrigado",
+		                    "Não, isto não!"};
+		int n = JOptionPane.showOptionDialog(null,
+		    "Você gostaria de feijoada com macarrão? ",
+		    "Pergunta",
+		    JOptionPane.YES_NO_CANCEL_OPTION,
+		    JOptionPane.QUESTION_MESSAGE,
+		    null,
+		    opcoes,
+		    opcoes[2]);
+
+
+		// JOptioPane (construtor)
+		final JOptionPane optionPane = new JOptionPane(
+		     "Pressione um dos botões para fechar a janela.\n"
+		   + "Entendeu?",
+		    JOptionPane.QUESTION_MESSAGE,
+		    JOptionPane.YES_NO_OPTION);
+
+
+		//Icone default, Título customizado
+		int n1 = JOptionPane.showConfirmDialog(
+		    null,
+		    "Você gosta de feijoada?",
+		    "Pergunta",
+		    JOptionPane.YES_NO_OPTION);
+
+
+		// Opções customizadas
+		Object[] options = {"Sim, por favor",
+		                    "NÃO!"};
+		int n2 = JOptionPane.showOptionDialog(null,
+		    "Você quer uma feijoada?",
+		    "Pergunta",
+		    JOptionPane.YES_NO_OPTION,
+		    JOptionPane.QUESTION_MESSAGE,
+		    null,     	//ícone default
+		    options,  	//títulos dos botões
+		    options[0]); 	//botão default
+
+
+
+	}
+
+}

@@ -1,0 +1,10 @@
+import java.time.LocalDate;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		Despesa d01 = new Despesa(LocalDate.of(2020,1,1),"Mercado",10.89);
+
+	}
+
+}

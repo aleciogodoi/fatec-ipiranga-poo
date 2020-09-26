@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class DespesaPessoal {
+	// Atributos
+	private String cpf;
+	private ArrayList<Despesa> despesas = new ArrayList<Despesa>();
+	
+	
+	@Override
+	public String toString() {
+		return "DespesaPessoal [CPF= " + cpf + ", Despesas=" + despesas + "]";
+	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}	
+	
+}
