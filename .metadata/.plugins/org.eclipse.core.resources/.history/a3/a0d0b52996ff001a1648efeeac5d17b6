@@ -8,12 +8,9 @@ public class TesteVeiculo {
 		veiculos.add(new Veiculo("KYX-0987",2014));
 		veiculos.add(new Caminhao("NZT-3028",2014,5));
 		veiculos.add(new Caminhao("HJU-3341",2000,7));
-		veiculos.add(new Onibus("KKK-3467",1988,50));
-		veiculos.add(new Onibus("CCC-1111",2001,55));
 		
 		for(Veiculo veiculo: veiculos) {
 			veiculo.exibirDados();
 		}
-		
 	}
 }
