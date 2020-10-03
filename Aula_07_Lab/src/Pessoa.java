@@ -1,4 +1,3 @@
-
 public class Pessoa {
 	private String nome;
 	private Data nascimento;
@@ -25,6 +24,8 @@ public class Pessoa {
 	public String toString() {
 		return "Pessoa [nome=" + nome + ", nascimento=" + nascimento + "]";
 	}
-
+	public void ImprimeDados() {
+		System.out.println(this.toString());
+	}
 	
 }
