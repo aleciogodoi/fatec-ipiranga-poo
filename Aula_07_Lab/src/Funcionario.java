@@ -1,9 +1,11 @@
 public class Funcionario extends Pessoa{
 	private float salario;
-
-	public Funcionario(float salario, String nome, Data nascimento ) {
+	private static int qtdFuncionarios;
+	public Funcionario(String nome,  Data nascimento, float salario ) {
 		super(nome, nascimento);
 		this.salario = salario;
+		if ( !(this instanceof Gerente) )
+			qtdFuncionarios++;
 	}
 
 	public float getSalario() {
@@ -21,5 +23,9 @@ public class Funcionario extends Pessoa{
 	
 	public float calculaImposto() {
 		return this.salario * .03f;
+	}
+	
+	public static int getTotal() {
+		return qtdFuncionarios;
 	}
 }

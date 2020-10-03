@@ -1,10 +1,11 @@
 public class Gerente extends Funcionario{
 	
 	private String area;
-	
-	public Gerente(String area,float salario, String nome, Data nascimento) {
-		super(salario, nome, nascimento);
+	private static int qtdGerentes;
+	public Gerente(String nome, Data nascimento, float salario, String area) {
+		super(nome, nascimento, salario);
 		this.area = area;
+		qtdGerentes++;
 	}
 
 	public String getArea() {
@@ -23,5 +24,9 @@ public class Gerente extends Funcionario{
 	@Override
 	public float calculaImposto() {
 		return this.getSalario() * .05f;
+	}
+	
+	public static int getTotal() {
+		return qtdGerentes;
 	}
 }

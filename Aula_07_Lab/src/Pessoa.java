@@ -1,12 +1,15 @@
 public class Pessoa {
 	private String nome;
 	private Data nascimento;
+	private static int qtdPessoas;
 	
 	public Pessoa() {
+		qtdPessoas++;
 	}
 	public Pessoa(String nome, Data nascimento) {
 		this.nome = nome;
 		this.nascimento = nascimento;
+		qtdPessoas++;
 	}
 	public String getNome() {
 		return nome;
@@ -28,4 +31,7 @@ public class Pessoa {
 		System.out.println(this.toString());
 	}
 	
+	public static int getTotal() {
+		return qtdPessoas;
+	}
 }
