@@ -18,7 +18,7 @@ public class Funcionario extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Funcionario [Salario=" + salario + ", " + super.toString() + "]";
+		return "Funcionario [Salario=" + salario + ", Imposto= " + calculaImposto() + ", "+ super.toString() + "]";
 	}
 	
 	public float calculaImposto() {
