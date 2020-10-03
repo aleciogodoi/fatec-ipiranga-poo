@@ -1,7 +1,0 @@
-import java.util.ArrayList;
-
-public class DespesaPessoal {
-	// Atributos
-	private String cpf;
-	private ArrayList<Despesa> despesas = new ArrayList<Despesa>();	
-}

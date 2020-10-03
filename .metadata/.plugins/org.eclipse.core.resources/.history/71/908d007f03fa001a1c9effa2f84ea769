@@ -1,9 +1,0 @@
-import java.time.LocalDate;
-
-public class Despesa {
-	//Atributos
-	LocalDate data;
-	String descDespesa;
-	double valor;
-	
-}
