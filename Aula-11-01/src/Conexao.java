@@ -9,7 +9,7 @@ public class Conexao {
 			Class.forName("org.sqlite.JDBC");
 			System.out.println("Driver JDBC encontrado!");
 			String pathBD = System.getProperty("user.dir").replace("\\", "/");			
-			String bdUrl = "jdbc:sqlite:"+pathBD+"/bd/ALPOO.db";
+			String bdUrl = "jdbc:sqlite:"+pathBD+"/bd/POO.db";
 			conn = DriverManager.getConnection(bdUrl); 
 			
 			
