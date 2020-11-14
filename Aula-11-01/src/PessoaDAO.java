@@ -1,6 +1,8 @@
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class PessoaDAO {
 	private Conexao conexao = new Conexao();
@@ -20,6 +22,33 @@ public class PessoaDAO {
 							  + " Where idPessoa = ?";
 	
 	private String sqlDelete = "Delete From Pessoa Where idPessoa = ?";
+	
+	public ArrayList<Pessoa> select() {
+		// Criar conexão com a base de dados
+		Connection conn = conexao.conectar();
+		ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+		
+		try {
+			PreparedStatement sqlComando = conn.prepareStatement(sqlSelect);
+			ResultSet resultado = sqlComando.executeQuery();
+			while(resultado.next()) {
+				pessoas.add(new Pessoa(
+									resultado.getInt("idPessoa"),
+									resultado.getString("Nome"),
+									resultado.getDouble("Peso"),
+									resultado.getDouble("Altura"),
+									resultado.getInt("Idade"),
+									resultado.getDate("DtNascimento")
+								)
+						);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			conexao.fecharConexao(conn);
+		}
+		return pessoas;
+	}
 	
 	public void insert(Pessoa pessoa) {
 		// Cria conexão com a base de dados
