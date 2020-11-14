@@ -23,6 +23,28 @@ public class PessoaDAO {
 	
 	private String sqlDelete = "Delete From Pessoa Where idPessoa = ?";
 	
+	public Pessoa select(int id) {
+		Connection conn = conexao.conectar();
+		Pessoa pessoa = new Pessoa();
+		try {
+			PreparedStatement sqlComando = conn.prepareStatement(sqlSelectId);
+			sqlComando.setInt(1, id);
+			ResultSet resultado = sqlComando.executeQuery();
+			resultado.next();
+			pessoa.setIdPessoa(resultado.getInt("idPessoa"));
+			pessoa.setNome(resultado.getString("Nome"));
+			pessoa.setPeso(resultado.getDouble("Peso"));
+			pessoa.setAltura(resultado.getDouble("Altura"));
+			pessoa.setIdade(resultado.getInt("Idade"));
+			pessoa.setDtNascimento(resultado.getDate("DtNascimento"));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			conexao.fecharConexao(conn);
+		}
+		return pessoa;
+	}
+	
 	public ArrayList<Pessoa> select() {
 		// Criar conexão com a base de dados
 		Connection conn = conexao.conectar();

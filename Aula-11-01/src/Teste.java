@@ -16,6 +16,9 @@ public class Teste {
 		for (Pessoa pessoa: pessoaDAO.select()) {
 			System.out.println(pessoa);
 		}
+		
+		System.out.println("\nPesquisa idPessoa = 3 --> " + pessoaDAO.select(3));
+		
 	}
 
 }
