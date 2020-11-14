@@ -94,5 +94,37 @@ public class PessoaDAO {
 		}
 	}
 	
+	public void delete(int id) {
+		Connection conn = conexao.conectar();
+		try {
+			PreparedStatement sqlComando = conn.prepareStatement(sqlDelete);
+			sqlComando.setInt(1, id);
+			sqlComando.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			conexao.fecharConexao(conn);
+		}
+	}
+	
+	public void update(Pessoa pessoa) {
+		Connection conn = conexao.conectar();
+		try {
+			PreparedStatement sqlComando = conn.prepareStatement(sqlUpdate);
+			sqlComando.setString(1, pessoa.getNome());
+			sqlComando.setDouble(2, pessoa.getPeso());
+			sqlComando.setDouble(3, pessoa.getAltura());
+			sqlComando.setInt(4, pessoa.getIdade());
+			sqlComando.setDate(5, pessoa.getDtNascimento());	
+			sqlComando.setInt(6, pessoa.getIdPessoa());
+			sqlComando.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			conexao.fecharConexao(conn);
+		}
+		
+	}
+	
 
 }

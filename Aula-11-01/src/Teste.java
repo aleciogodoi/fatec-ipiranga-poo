@@ -12,13 +12,23 @@ public class Teste {
 		pessoaDAO.insert(new Pessoa(4, "João", 80.43, 1.79, 20, Date.valueOf(LocalDate.of(2000, 9, 23)) ));
 		pessoaDAO.insert(new Pessoa(5, "Carla", 58.77, 1.55, 15, Date.valueOf(LocalDate.of(2005, 7, 18)) ));
 		*/
-		
 		for (Pessoa pessoa: pessoaDAO.select()) {
 			System.out.println(pessoa);
 		}
-		
 		System.out.println("\nPesquisa idPessoa = 3 --> " + pessoaDAO.select(3));
-		
+
+		pessoaDAO.delete(5);
+		System.out.println();
+		for (Pessoa pessoa: pessoaDAO.select()) {
+			System.out.println(pessoa);
+		}
+
+		pessoaDAO.update(new Pessoa(4, "João das Couves", 82.43, 1.79, 20, Date.valueOf(LocalDate.of(2000, 9, 23)) ));
+		System.out.println();
+		for (Pessoa pessoa: pessoaDAO.select()) {
+			System.out.println(pessoa);
+		}
+
 	}
 
 }
